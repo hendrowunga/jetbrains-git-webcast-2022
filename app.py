@@ -8,7 +8,7 @@ app= flask.Flask(__name__)
 print('App starting up ,version{__VERSION__}')
 @app.get('/')
 def index():
-    return "Hallo world"
+    return flask.render_template('index.html')
 @app.get('/about')
 def about():
     return ("Thi is a demo app,it's simple")
